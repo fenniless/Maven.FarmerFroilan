@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
+import java.util.List;
+
 public class Field {
-    private java.util.List<CropRow> cropRows;
+
+    private List<CropRow> cropRows;
 }
