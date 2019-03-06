@@ -1,8 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Botanist {
+public interface Botanist {
 
-    public void plants() {
-
-    }
+    public void plants();
 }
