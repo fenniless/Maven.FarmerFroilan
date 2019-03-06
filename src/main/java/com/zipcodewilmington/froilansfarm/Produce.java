@@ -6,4 +6,8 @@ public abstract class Produce {
     public Edible yield(){
         return null;
     }
+
+    public Boolean getFertilized() {
+        return fertilized;
+    }
 }
