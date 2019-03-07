@@ -1,6 +1,12 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Botanist {
+public class Botanist extends FarmerDecorator {
 
-    public void plants(Crop crop, CropRow cropRow);
+    private Farming core;
+
+    public Botanist(Farming inner) {
+        core = inner;
+    }
+
+    void plants(Crop crop, CropRow cropRow);
 }

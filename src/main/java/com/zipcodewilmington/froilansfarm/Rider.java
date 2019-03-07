@@ -1,8 +1,18 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Rider {
+public class Rider extends FarmerDecorator{
 
-    void mount(Rideable obj);
+    private Farming core;
 
-    void dismount(Rideable obj);
+    public Rider(Farming inner) {
+        core = inner;
+    }
+
+    public void mount(Rideable obj) {
+
+    }
+
+    public void dismount(Rideable obj) {
+
+    }
 }

@@ -1,19 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Farmer extends Person implements Botanist, Eater, Rider{
-
-    private Farm farm;
+public class Farmer extends Person implements Farming, Botanist {
 
     public void plants(Crop crop, CropRow cropRow) {
 
     }
-
-    public void mount(Rideable obj) {
-
-    }
-
-    public void dismount(Rideable obj) {
-
-    }
-
 }
