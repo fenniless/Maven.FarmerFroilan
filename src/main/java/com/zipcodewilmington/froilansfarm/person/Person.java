@@ -1,6 +1,6 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.person;
 
-public abstract class Animal implements Eater, NoiseMaker {
+public class Person implements NoiseMaker, Eater {
 
 
     public String makeNoise() {
@@ -10,4 +10,5 @@ public abstract class Animal implements Eater, NoiseMaker {
     public void eat(Edible edible) {
 
     }
+
 }

@@ -1,4 +1,7 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.person;
+
+import com.zipcodewilmington.froilansfarm.products.Crop;
+import com.zipcodewilmington.froilansfarm.products.CropRow;
 
 public class Botanist extends FarmerDecorator {
 

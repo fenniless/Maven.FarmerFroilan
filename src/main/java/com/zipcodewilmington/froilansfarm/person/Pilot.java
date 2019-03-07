@@ -1,4 +1,6 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.person;
+
+import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
 
 public class Pilot extends FarmerDecorator {
 

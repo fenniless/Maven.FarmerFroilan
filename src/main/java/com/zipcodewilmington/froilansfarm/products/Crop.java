@@ -1,4 +1,6 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.products;
+
+import com.zipcodewilmington.froilansfarm.person.Edible;
 
 public class Crop<T extends Edible> implements Produce{
 
@@ -9,7 +11,7 @@ public class Crop<T extends Edible> implements Produce{
         return hasBeenHarvested;
     }
 
-    public T yield() {
+    public EdibleEgg yield() {
         return null;
     }
 }
