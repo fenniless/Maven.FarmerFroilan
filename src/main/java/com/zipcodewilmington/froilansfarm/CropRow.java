@@ -2,8 +2,11 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.List;
 
-public class CropRow {
+public class CropRow<T extends Crop> {
 
-    public List<Crop> crops;
+    private List<T> crops;
 
+    public CropRow(List<T> crops) {
+        this.crops = crops;
+    }
 }

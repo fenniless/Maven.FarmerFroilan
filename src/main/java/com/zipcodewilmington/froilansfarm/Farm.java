@@ -4,10 +4,10 @@ import java.util.List;
 
 public class Farm {
 
-    private Field field;
-    private List<Stable> stables;
-    private List<ChickenCoop> chickenCoops;
-    private Farmhouse farmhouse;
+    private Shelter<CropRow> field;
+    private List<Shelter<Horse>> stables;
+    private List<Shelter<Chicken>> chickenCoops;
+    private Shelter<Person> farmhouse;
     private List<Vehicle> vehicles;
 
 

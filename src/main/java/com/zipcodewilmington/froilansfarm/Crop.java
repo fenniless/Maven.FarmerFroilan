@@ -1,10 +1,15 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Crop extends Produce{
+public class Crop<T extends Edible> implements Produce{
 
-    private Boolean hadBeenHarvested;
+    private Boolean hasBeenHarvested;
+    private Boolean hasBeenFertilized;
 
-    public Boolean getHadBeenHarvested() {
-        return hadBeenHarvested;
+    public Boolean getHasBeenHarvested() {
+        return hasBeenHarvested;
+    }
+
+    public T yield() {
+        return null;
     }
 }

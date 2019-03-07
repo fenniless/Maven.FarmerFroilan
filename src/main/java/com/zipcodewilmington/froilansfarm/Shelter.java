@@ -2,8 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.List;
 
-public class ChickenCoop {
+public class Shelter<T> {
 
-    private List<Chicken> chickens;
-
+    private List<T> list;
 }

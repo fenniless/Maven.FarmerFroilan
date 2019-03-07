@@ -1,13 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Produce {
-    private Boolean fertilized;
+public interface Produce {
 
-    public Edible yield(){
-        return null;
-    }
+    Edible yield();
 
-    public Boolean getFertilized() {
-        return fertilized;
-    }
 }

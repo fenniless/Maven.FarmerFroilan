@@ -4,7 +4,7 @@ public class Farmer extends Person implements Botanist, Eater, Rider{
 
     private Farm farm;
 
-    public void plants() {
+    public void plants(Crop crop, CropRow cropRow) {
 
     }
 
