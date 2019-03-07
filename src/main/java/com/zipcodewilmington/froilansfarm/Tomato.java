@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Tomato implements Edible{
+public class Tomato extends Crop implements Edible{
 
 
 }

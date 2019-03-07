@@ -1,10 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Farmer extends Person implements Botanist, Eater, Rider{
+public class Pilot extends Person implements Rider, Eater {
 
-    private Farm farm;
-
-    public void plants() {
+    public void fly(Vehicle vehicle) {
 
     }
 
@@ -15,5 +13,4 @@ public class Farmer extends Person implements Botanist, Eater, Rider{
     public void dismount(Rideable obj) {
 
     }
-
 }
