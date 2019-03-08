@@ -8,5 +8,7 @@ public class Botanist extends FarmerDecorator {
         core = inner;
     }
 
-    void plants(Crop crop, CropRow cropRow);
+    public void plants(Crop crop, CropRow cropRow) {
+
+    }
 }
