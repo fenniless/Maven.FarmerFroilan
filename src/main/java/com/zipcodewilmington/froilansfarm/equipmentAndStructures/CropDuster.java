@@ -11,4 +11,5 @@ public class CropDuster extends Aircraft implements FarmVehicle{
     public void fertilize(CropRow cropRow){
 
     }
+
 }
