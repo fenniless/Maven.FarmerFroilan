@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.person;
 
-public interface Farming {
+public interface Personable {
 
 }

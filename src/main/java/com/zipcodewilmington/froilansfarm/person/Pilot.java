@@ -1,17 +1,31 @@
 package com.zipcodewilmington.froilansfarm.person;
 
-import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
+import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Aircraft;
 
-public class Pilot extends FarmerDecorator {
+public class Pilot extends PersonDecorator {
 
-    private Farming core;
+    private boolean airborne;
 
-    public Pilot(Farming inner) {
+    private Personable core;
+
+    public Pilot(Personable inner) {
         core = inner;
+        airborne = false;
     }
 
-    public void fly(Vehicle vehicle) {
-
+    public Personable getCore() {
+        return core;
     }
 
+    public void fly(Aircraft aircraft) {
+        airborne = true;
+    }
+
+    public void land(Aircraft aircraft) {
+        airborne = false;
+    }
+
+    public boolean getAirborne() {
+        return airborne;
+    }
 }

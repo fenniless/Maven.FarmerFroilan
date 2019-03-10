@@ -9,4 +9,8 @@ public class MainApplication {
 
     }
 
+    public Farm createFarm() {
+        return new Farm();
+    }
 }
+

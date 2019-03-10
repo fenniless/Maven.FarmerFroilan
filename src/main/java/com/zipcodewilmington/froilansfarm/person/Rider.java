@@ -1,18 +1,22 @@
 package com.zipcodewilmington.froilansfarm.person;
 
-public class Rider extends FarmerDecorator{
+public class Rider extends PersonDecorator{
 
-    private Farming core;
+    private Personable core;
 
-    public Rider(Farming inner) {
+    public Rider(Personable inner) {
         core = inner;
     }
 
-    public void mount(Rideable obj) {
+    public Personable getCore() {
+        return core;
+    }
 
+    public void mount(Rideable obj) {
+        obj.ride();
     }
 
     public void dismount(Rideable obj) {
-
+        obj.ride();
     }
 }
