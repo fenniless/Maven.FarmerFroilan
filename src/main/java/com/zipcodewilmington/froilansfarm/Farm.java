@@ -17,6 +17,4 @@ public class Farm {
     private Shelter<Person> farmhouse;
     private List<Vehicle> vehicles;
 
-
-
 }
