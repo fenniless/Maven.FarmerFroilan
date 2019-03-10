@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.products;
 
 public class Chicken extends Animal implements Produce {
 
