@@ -1,16 +1,14 @@
 package com.zipcodewilmington.froilansfarm.equipmentAndStructures;
 
 import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.FarmBuilder;
 import com.zipcodewilmington.froilansfarm.products.Crop;
 import com.zipcodewilmington.froilansfarm.products.CropRow;
-import com.zipcodewilmington.froilansfarm.products.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class CropDusterTest {
 
@@ -31,7 +29,7 @@ public class CropDusterTest {
     @Test
     public void operate() {
         CropDuster cropDuster = new CropDuster();
-        Farm farm = new Farm();
+        Farm farm = new FarmBuilder().createFarm();
         cropDuster.operate(farm);
 
     }

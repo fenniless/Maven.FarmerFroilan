@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.equipmentAndStructures;
 
 import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.FarmBuilder;
 import com.zipcodewilmington.froilansfarm.person.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.person.Rideable;
 import com.zipcodewilmington.froilansfarm.products.Crop;
@@ -10,8 +11,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class TractorTest {
 
@@ -49,7 +48,7 @@ public class TractorTest {
     @Test
     public void operate() {
         Tractor tractor = new Tractor();
-        Farm farm = new Farm();
+        Farm farm = new FarmBuilder().createFarm();
         tractor.operate(farm);
     }
 }
