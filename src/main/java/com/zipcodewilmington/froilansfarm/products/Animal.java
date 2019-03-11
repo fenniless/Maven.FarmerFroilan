@@ -6,10 +6,7 @@ import com.zipcodewilmington.froilansfarm.person.NoiseMaker;
 
 public abstract class Animal implements Eater, NoiseMaker {
 
-
-    public String makeNoise() {
-        return null;
-    }
+    public abstract String makeNoise();
 
     public void eat(Edible edible) {
 

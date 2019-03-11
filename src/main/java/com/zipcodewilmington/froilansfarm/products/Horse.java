@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.products.Animal;
 public class Horse extends Animal implements Rideable {
 
     public String makeNoise(){
-        return "neeigh";
+        return "neigh";
     }
     public void ride() {
     }
