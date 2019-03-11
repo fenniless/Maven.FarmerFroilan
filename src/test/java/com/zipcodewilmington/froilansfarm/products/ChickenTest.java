@@ -1,6 +1,5 @@
 package com.zipcodewilmington.froilansfarm.products;
 
-import com.zipcodewilmington.froilansfarm.person.Edible;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,7 +13,7 @@ public class ChickenTest {
         EdibleEgg actual = new EdibleEgg();
 
         //When
-       EdibleEgg expected = chickadee.yield();
+        EdibleEgg expected = chickadee.yield();
 
         //Then
         Assert.assertEquals(actual, expected);

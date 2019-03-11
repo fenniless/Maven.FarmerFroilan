@@ -8,14 +8,8 @@ public class Farmer extends PersonDecorator {
 
     private Personable core;
 
-    private Farm farm;
-
-    public Farmer(Personable inner, Farm farm) {
-        this.farm = farm;
+    public Farmer(Personable inner) {
         this.core = inner;
     }
 
-    public Farm getFarm() {
-        return farm;
-    }
 }

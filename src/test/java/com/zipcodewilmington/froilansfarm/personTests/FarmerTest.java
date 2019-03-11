@@ -15,10 +15,9 @@ public class FarmerTest {
         Farm expected = new FarmBuilder().createFarm();
 
         // When
-        Farmer farmer = new Farmer(new Person(), expected);
-        Farm actual = farmer.getFarm();
+        Farmer farmer = new Farmer(new Person());
 
         // Then
-        Assert.assertEquals(expected, actual);
+        Assert.assertTrue(farmer != null);
     }
 }

@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Shelter;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
 import com.zipcodewilmington.froilansfarm.person.Person;
+import com.zipcodewilmington.froilansfarm.person.Personable;
 import com.zipcodewilmington.froilansfarm.products.Chicken;
 import com.zipcodewilmington.froilansfarm.products.CropRow;
 import com.zipcodewilmington.froilansfarm.products.Horse;
@@ -40,7 +41,7 @@ public class FarmBuilderTest {
 
     @Test
     public void setFarmhouseTest() {
-        Shelter<Person> farmhouse = new Shelter<Person>();
+        Shelter<Personable> farmhouse = new Shelter<Personable>();
         FarmBuilder personFarm = new FarmBuilder().setFarmhouse(farmhouse);
         Assert.assertEquals(farmhouse,personFarm.getFarmhouse());
     }
@@ -57,7 +58,7 @@ public class FarmBuilderTest {
         Shelter<CropRow> field = new Shelter<CropRow>();
         List<Shelter<Horse>> stables = new ArrayList<Shelter<Horse>>();
         List<Shelter<Chicken>> chickenCoops = new ArrayList<Shelter<Chicken>>();
-        Shelter<Person> farmhouse = new Shelter<Person>();
+        Shelter<Personable> farmhouse = new Shelter<Personable>();
         List<Vehicle> garage = new ArrayList<Vehicle>();
         FarmBuilder farm = new FarmBuilder().setField(field).setStables(stables).setChickenCoops(chickenCoops)
                 .setFarmhouse(farmhouse).setVehicles(garage);

@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Shelter;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Tractor;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
+import com.zipcodewilmington.froilansfarm.person.*;
 import com.zipcodewilmington.froilansfarm.products.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -161,7 +162,43 @@ public class MainApplicationTest {
     }
 
     @Test
-    public void createFroilansFarmTest() {
-        // Given
+    public void createFroilanTest() {
+        // When
+        Personable froilan = main.createFroilan();
+
+        // Then
+        Assert.assertTrue(froilan != null);
+    }
+
+    @Test
+    public void createFroilandaTest() {
+        // When
+        Personable froilanda = main.createFroilanda();
+
+        // Then
+        Assert.assertTrue(froilanda != null);
+    }
+
+    @Test
+    public void createFroilansFarmhouseTest() {
+        //Given
+        int expected = 2;
+
+        // When
+        Shelter<Personable> froilansFarm = main.createFroilansFarmhouse();
+        int actual = froilansFarm.getList().size();
+
+        // Then
+        Assert.assertTrue(froilansFarm != null);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setUpFroilansFarmTest() {
+        // When
+        Farm farm = main.setUpFroilansFarm();
+
+        // Then
+        Assert.assertTrue(farm != null);
     }
 }

@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
         import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Shelter;
         import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
-        import com.zipcodewilmington.froilansfarm.person.Person;
+        import com.zipcodewilmington.froilansfarm.person.Personable;
         import com.zipcodewilmington.froilansfarm.products.Chicken;
         import com.zipcodewilmington.froilansfarm.products.CropRow;
         import com.zipcodewilmington.froilansfarm.products.Horse;
@@ -13,7 +13,7 @@ public class FarmBuilder {
     private Shelter<CropRow> field;
     private List<Shelter<Horse>> stables;
     private List<Shelter<Chicken>> chickenCoops;
-    private Shelter<Person> farmhouse;
+    private Shelter<Personable> farmhouse;
     private List<Vehicle> vehicles;
 
     public FarmBuilder setField(Shelter<CropRow> field) {
@@ -31,7 +31,7 @@ public class FarmBuilder {
         return this;
     }
 
-    public FarmBuilder setFarmhouse(Shelter<Person> farmhouse) {
+    public FarmBuilder setFarmhouse(Shelter<Personable> farmhouse) {
         this.farmhouse = farmhouse;
         return this;
     }
@@ -57,7 +57,7 @@ public class FarmBuilder {
         return chickenCoops;
     }
 
-    public Shelter<Person> getFarmhouse() {
+    public Shelter<Personable> getFarmhouse() {
         return farmhouse;
     }
 

@@ -4,6 +4,7 @@ import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Shelter;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Tractor;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
 import com.zipcodewilmington.froilansfarm.person.Person;
+import com.zipcodewilmington.froilansfarm.person.Personable;
 import com.zipcodewilmington.froilansfarm.products.Chicken;
 import com.zipcodewilmington.froilansfarm.products.Crop;
 import com.zipcodewilmington.froilansfarm.products.CropRow;
@@ -66,12 +67,12 @@ class FarmTest {
     @Test
     void getFarmhouse() {
         // Given
-        Shelter<Person> expected = new Shelter<Person>();
+        Shelter<Personable> expected = new Shelter<Personable>();
         expected.add(new Person());
         Farm farm = new Farm(null, null, null, expected, null);
 
         // When
-        Shelter<Person> actual = farm.getFarmhouse();
+        Shelter<Personable> actual = farm.getFarmhouse();
 
         // Then
         Assert.assertEquals(expected, actual);

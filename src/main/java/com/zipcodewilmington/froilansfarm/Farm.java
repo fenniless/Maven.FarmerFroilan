@@ -1,9 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.person.Personable;
 import com.zipcodewilmington.froilansfarm.products.Horse;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Shelter;
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
-import com.zipcodewilmington.froilansfarm.person.Person;
 import com.zipcodewilmington.froilansfarm.products.Chicken;
 import com.zipcodewilmington.froilansfarm.products.CropRow;
 
@@ -14,10 +14,10 @@ public class Farm {
     private Shelter<CropRow> field;
     private List<Shelter<Horse>> stables;
     private List<Shelter<Chicken>> chickenCoops;
-    private Shelter<Person> farmhouse;
+    private Shelter<Personable> farmhouse;
     private List<Vehicle> vehicles;
 
-    public Farm(Shelter<CropRow> field, List<Shelter<Horse>> stables, List<Shelter<Chicken>> chickenCoops, Shelter<Person> farmhouse, List<Vehicle> vehicles) {
+    public Farm(Shelter<CropRow> field, List<Shelter<Horse>> stables, List<Shelter<Chicken>> chickenCoops, Shelter<Personable> farmhouse, List<Vehicle> vehicles) {
         this.field = field;
         this.stables = stables;
         this.chickenCoops = chickenCoops;
@@ -37,7 +37,7 @@ public class Farm {
         return chickenCoops;
     }
 
-    public Shelter<Person> getFarmhouse() {
+    public Shelter<Personable> getFarmhouse() {
         return farmhouse;
     }
 
