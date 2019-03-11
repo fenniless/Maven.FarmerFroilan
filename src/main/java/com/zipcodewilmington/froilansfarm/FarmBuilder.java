@@ -44,4 +44,24 @@ public class FarmBuilder {
     public Farm createFarm() {
         return new Farm(field, stables, chickenCoops, farmhouse, vehicles);
     }
+
+    public Shelter<CropRow> getField() {
+        return field;
+    }
+
+    public List<Shelter<Horse>> getStables() {
+        return stables;
+    }
+
+    public List<Shelter<Chicken>> getChickenCoops() {
+        return chickenCoops;
+    }
+
+    public Shelter<Person> getFarmhouse() {
+        return farmhouse;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
 }
