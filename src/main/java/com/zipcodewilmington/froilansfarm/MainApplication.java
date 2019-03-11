@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Shelter;
+import com.zipcodewilmington.froilansfarm.equipmentAndStructures.*;
 import com.zipcodewilmington.froilansfarm.products.*;
 
 import java.util.ArrayList;
@@ -76,6 +76,31 @@ public class MainApplication {
             stable.add(new Horse());
         }
         return stable;
+    }
+
+    public List<Shelter<Horse>> createFroilansStables() {
+        List<Shelter<Horse>> stables = new ArrayList<Shelter<Horse>>();
+        stables.add(createStable(3));
+        stables.add(createStable(3));
+        stables.add(createStable(4));
+        return stables;
+    }
+
+    public List<Vehicle> createFroilansVehicles() {
+        List<Vehicle> vehicles = new ArrayList<Vehicle>();
+        vehicles.add(new Tractor());
+        vehicles.add(new CropDuster());
+        vehicles.add(new Aircraft());
+        return vehicles;
+    }
+
+    public Farm setUpFroilansFarm() {
+        FarmBuilder farmBuilder = new FarmBuilder();
+        farmBuilder.setField(createField());
+        farmBuilder.setChickenCoops(createFroilansChixCoops());
+        farmBuilder.setStables(createFroilansStables());
+        farmBuilder.setVehicles(createFroilansVehicles());
+        return farmBuilder.createFarm();
     }
 }
 

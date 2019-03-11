@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Shelter;
+import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Tractor;
+import com.zipcodewilmington.froilansfarm.equipmentAndStructures.Vehicle;
 import com.zipcodewilmington.froilansfarm.products.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -128,5 +130,38 @@ public class MainApplicationTest {
         // Then
         Assert.assertEquals(expected, actual);
         Assert.assertTrue(horses.get(0) instanceof Horse);
+    }
+
+    @Test
+    public void createFroilansStablesTest() {
+        // Given
+        int expected = 3;
+
+        // When
+        List<Shelter<Horse>> froilansStables = main.createFroilansStables();
+        int actual = froilansStables.size();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+        Assert.assertTrue(froilansStables.get(0) instanceof Shelter);
+    }
+
+    @Test
+    public void createFroilansVehiclesTest() {
+        // Given
+        int expected = 3;
+
+        // When
+        List<Vehicle> vehicles = main.createFroilansVehicles();
+        int actual = vehicles.size();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+        Assert.assertTrue(vehicles.get(0) instanceof Tractor);
+    }
+
+    @Test
+    public void createFroilansFarmTest() {
+        // Given
     }
 }
