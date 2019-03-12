@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.products.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 /**
  * Created by leon on 2/26/18.
@@ -54,11 +55,7 @@ public class MainApplication {
     }
 
     public Shelter<Chicken> createChickenCoop(int numberOfChickens){
-        Shelter<Chicken> chickenCoop = new Shelter<Chicken>();
-        for (int i = 0; i < numberOfChickens; i++) {
-            chickenCoop.add(new Chicken());
-        }
-        return chickenCoop;
+        return createShelter(Chicken::new, numberOfChickens);
     }
 
     public List<Shelter<Chicken>> createFroilansChixCoops() {
@@ -72,11 +69,14 @@ public class MainApplication {
     }
 
     public Shelter<Horse> createStable(int numberOfHorses) {
-        Shelter<Horse> stable = new Shelter<Horse>();
-        for (int i = 0; i < numberOfHorses; i++) {
-            stable.add(new Horse());
+        return createShelter(Horse::new, numberOfHorses);
+    }
+    private <T> Shelter<T> createShelter(Supplier<T> supplier, int numberOfElements) {
+        Shelter<T> shelter = new Shelter<T>();
+        for (int i = 0; i < numberOfElements; i++) {
+            shelter.add(supplier.get());
         }
-        return stable;
+        return shelter;
     }
 
     public List<Shelter<Horse>> createFroilansStables() {

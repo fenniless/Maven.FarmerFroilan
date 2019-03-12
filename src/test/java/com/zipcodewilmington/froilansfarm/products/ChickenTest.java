@@ -18,8 +18,6 @@ public class ChickenTest {
         //Then
         Assert.assertEquals(actual, expected);
 
-
-
     }
 
 
